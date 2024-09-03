@@ -40,3 +40,4 @@ mvnw
 mvnw.cmd
 .mvn/
 src/main/resources/META-INF
+dependency-reduced-pom.xml

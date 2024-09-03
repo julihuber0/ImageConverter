@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Optional;
 
 public class ConverterApplication extends Application {
@@ -17,7 +18,7 @@ public class ConverterApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(ConverterApplication.class.getResource("converter.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("ImageConverter");
-        Image icon = new Image("file:src/main/resources/com/julian/imageconverter/img/icon.png");
+        Image icon = new Image(Objects.requireNonNull(ConverterApplication.class.getResource("img/icon.png")).toString());
         stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
@@ -27,7 +28,7 @@ public class ConverterApplication extends Application {
             alert.setHeaderText("Quit ImageConverter?");
             alert.setContentText("Do you want to exit?");
             Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-            alertStage.getIcons().add(new Image("file:src/main/resources/com/julian/imageconverter/img/icon.png"));
+            alertStage.getIcons().add(new Image(Objects.requireNonNull(ConverterApplication.class.getResource("img/icon.png")).toString()));
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent()) {
                 if (result.get() == ButtonType.CANCEL) {

@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ConverterController implements Initializable {
@@ -90,7 +91,7 @@ public class ConverterController implements Initializable {
                 alert.setHeaderText("An error occurred");
                 alert.setContentText(exception.getMessage());
                 Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-                stage.getIcons().add(new Image("file:src/main/resources/com/julian/imageconverter/img/icon.png"));
+                stage.getIcons().add(new Image(Objects.requireNonNull(ConverterApplication.class.getResource("img/icon.png")).toString()));
                 alert.show();
                 exception = null;
             }
