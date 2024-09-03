@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.julian.imageconverter.view.ConverterController">
+   <children>
+      <ChoiceBox fx:id="outputFormatChoiceBox" layoutX="47.0" layoutY="45.0" prefHeight="25.0" prefWidth="150.0" />
+      <Slider fx:id="compressionSlider" blockIncrement="5.0" layoutX="212.0" layoutY="46.0" majorTickUnit="5.0" minorTickCount="5" prefHeight="24.0" prefWidth="292.0" showTickMarks="true" snapToTicks="true" value="80.0" />
+      <Label fx:id="compressionLabel" layoutX="531.0" layoutY="49.0" text="80" />
+      <Label layoutX="47.0" layoutY="21.0" text="Output image format:" />
+      <Label layoutX="222.0" layoutY="21.0" text="Quality:" />
+      <Button fx:id="inputPathButton" layoutX="453.0" layoutY="164.0" mnemonicParsing="false" onAction="#chooseInputPath" text="Choose path..." />
+      <TextField fx:id="inputPathField" layoutX="47.0" layoutY="164.0" prefHeight="25.0" prefWidth="406.0" promptText="Input file path" />
+      <TextField fx:id="outputPathField" layoutX="47.0" layoutY="210.0" prefHeight="25.0" prefWidth="406.0" promptText="Output file path" />
+      <Button fx:id="outputPathButton" layoutX="453.0" layoutY="210.0" mnemonicParsing="false" onAction="#chooseOutputPath" text="Choose path..." />
+      <Button fx:id="convertButton" layoutX="197.0" layoutY="259.0" mnemonicParsing="false" onAction="#convert" prefHeight="64.0" prefWidth="201.0" text="Convert">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Button>
+      <Label layoutX="47.0" layoutY="96.0" text="Input image file extension:" />
+      <Label layoutX="207.0" layoutY="346.0" text="Currently processing:" />
+      <Label fx:id="processingLabel" layoutX="334.0" layoutY="346.0" text="0" />
+      <ChoiceBox fx:id="inputFormatChoiceBox" layoutX="47.0" layoutY="123.0" prefWidth="150.0" />
+      <Button fx:id="cancelButton" layoutX="453.0" layoutY="284.0" mnemonicParsing="false" onAction="#cancel" text="Cancel all" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="358.0" layoutY="348.0" prefHeight="18.0" prefWidth="15.0" />
+   </children>
+</AnchorPane>
