@@ -5,6 +5,7 @@ target/
 
 ### IntelliJ IDEA ###
 .idea/
+out/
 *.iws
 *.iml
 *.ipr
@@ -38,3 +39,4 @@ build/
 mvnw
 mvnw.cmd
 .mvn/
+src/main/resources/META-INF
