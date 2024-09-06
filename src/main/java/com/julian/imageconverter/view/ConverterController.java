@@ -56,7 +56,7 @@ public class ConverterController implements Initializable {
     private ProgressIndicator progressIndicator;
 
     private final String[] outputFormats = {"jpg", "jxl", "avif", "webp"};
-    private final String[] inputFormats = {"jpg", "jpeg", "JPG", "png", "gif", "bmp", "tiff", "webp", "avif", "heic"};
+    private final String[] inputFormats = {"jpg", "jpeg", "png", "gif", "bmp", "tiff", "webp", "avif", "heic", "jxl"};
 
     String outputFormat = "jpg";
     String inputFormat = "jpg";
