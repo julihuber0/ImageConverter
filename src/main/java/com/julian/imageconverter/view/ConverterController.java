@@ -55,7 +55,7 @@ public class ConverterController implements Initializable {
     @FXML
     private ProgressIndicator progressIndicator;
 
-    private final String[] outputFormats = {"jpg", "avif", "webp"};
+    private final String[] outputFormats = {"jpg", "jxl", "avif", "webp"};
     private final String[] inputFormats = {"jpg", "jpeg", "JPG", "png", "gif", "bmp", "tiff", "webp", "avif", "heic"};
 
     String outputFormat = "jpg";
